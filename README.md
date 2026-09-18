@@ -26,6 +26,16 @@ npm run dev
 
 Open [http://localhost:4173](http://localhost:4173).
 
+### Test on an iPhone
+
+Camera and microphone access on iPhone requires HTTPS. Start Vite, then create a temporary HTTPS tunnel:
+
+```bash
+npx localtunnel --port 4173
+```
+
+Open the generated `https://…loca.lt` URL in iPhone Safari and allow Camera and Microphone when prompted. The plain `http://192.168.x.x:4173` LAN URL is useful for layout checks, but Safari will block camera access there. If native fullscreen is unavailable, Cuelance switches to an in-page viewport fullscreen mode with its own controls.
+
 For the production-style Node server:
 
 ```bash
